@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Embedded Video Player</title>
+  <style>
+    /* Center the player and make it responsive while preserving 1000×600 ratio (5:3) */
+    .player-wrap {
+      max-width: 1000px;
+      margin: 2rem auto;
+      aspect-ratio: 5 / 3; /* 1000 / 600 */
+      background: #000;    /* fallback background while loading */
+    }
+    .player-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0; /* replaces deprecated frameborder */
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="player-wrap">
+      <iframe
+        id="video-player"
+        src="https://streambtw.com/iframe/ch2.php"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        sandbox="allow-same-origin allow-scripts"
+        title="StreamBTW Channel 2"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <noscript>
+      JavaScript is required to view this embedded player. You can open it directly:
+      <a href="https://streambtw.com/iframe/ch2.php" target="_blank" rel="noopener">Open stream</a>.
+    </noscript>
+  </main>
+</body>
+</html>
